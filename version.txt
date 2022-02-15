@@ -1,0 +1,37 @@
+version 5.5 - 15.02.2022
+
++ included openmp support on linux
+
+version 5 - 30.07.2021
+
++ using jit for generating sinograms / gradients. 
+  -> lucious memory consumption is gone (now works with slice > 1000 pixels)
+  -> speed up of iteration by around factor of 3
+     numsim, Ndet=180, mr=1, factr=1e9, from 67s -> 16s
++ cleaned up iterlib and cut out around 40% of the lines.
++ radon transform and grad radon functions are now in one function for easier maintancance
+
+version 4 - 
+
++ improved documentation of gradradon & graddiffradon in iterlib
+
+version 3 - 24.04.2019
+
++ new directory structure
+  This means that the scripts need to kow the path to the iterlib.py library.
+  You can do this by either using:
+	import sys
+	sys.path.append('../libs/')
+	import iterlib
+  or by setting the path to iterlib in spyder under:
+	tools -> PYTHONPATH manager -> add appropriate path to ./libs/
++ fixed minor bugs in examples/numsim.py
++ fixed minor bugs in examples/fastspheres.py
+
+version 2 - 10.04.2019
+
++ minor bug fixes
+
+version 1 - 03.04.2019
+
++ first version of the iteration library. 
